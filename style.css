@@ -1,3 +1,4 @@
+/* General Reset & Base Font */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +17,7 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+/* Navbar Styling */
 nav {
   background: #1e1b2e;
   padding: 15px 40px 10px;
@@ -28,15 +30,6 @@ nav {
   position: sticky;
   top: 10px;
   z-index: 998;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background 0.3s;
-  font-weight: 600;
 }
 nav a {
   color: white;
@@ -222,7 +215,6 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(130, 87, 230, 0.2);
 }
 
-
 .timeline-content h3 {
   font-size: 18px;
   font-weight: 700;
@@ -241,12 +233,6 @@ section {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInUp 1s ease forwards;
-}
-
-section.loaded {
-  opacity: 1 !important;
-  transform: none !important;
-  animation: none !important;
 }
 
 .skills-grid {
@@ -415,7 +401,7 @@ section h3 {
 .project-description {
   font-size: 0.95rem;
   margin-bottom: 12px;
-  color: #555;
+  color: black;
 }
 .project-tech {
   font-size: 0.85rem;
@@ -440,14 +426,13 @@ section h3 {
   font-weight: bold;
   color: white;
   background-color: #7b2cbf;
-  border-radius: 6px; /* smaller border radius */
-  border: none ;  /* Remove any borders */
-  box-shadow: none; /* Remove box shadow */
-  outline: none; /* Remove focus outlines */
+  border-radius: 6px; 
+  border: none ;  
+  box-shadow: none; 
+  outline: none; 
   display: inline-block;
   transition: transform 0.3s ease, background-color 0.3s ease;
   appearance: none;
-  
 }
 
 .project-links a:hover {
@@ -459,6 +444,7 @@ section h3 {
   margin-bottom: 30px;
 }
 
+/* Theme Toggle button styling */
 .theme-toggle {
   position: fixed;
   top: 35px;
@@ -476,6 +462,7 @@ section h3 {
   color: white;
   font-size: 20px;
 }
+/* Styling for light mode */
 body.light {
   background: linear-gradient(135deg,#eac6f8,#d3bfff);
   color: black;
@@ -560,86 +547,84 @@ body.light .message-form input, body.light .message-form textarea{
 }
 
 body.light .skill input[type="range"] {
-  background: #4a148c; /* Light gray track for light mode */
+  background: #4a148c;
 }
 
 body.light .skill input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Important for consistent styling in Chrome/Safari */
-  width: 15px; /* Set a specific width */
-  height: 15px; /* Ensure height is the same as width */
-  background: #9033ee; /* Lighter purple thumb for light mode */
-  border: none; /* No border for a clean circle */
-  border-radius: 50%; /* Make it a circle */
+  -webkit-appearance: none;
+  width: 15px; 
+  height: 15px; 
+  background: #9033ee; 
+  border: none;
+  border-radius: 50%; 
   box-shadow: 0 0 2px #9033ee;
-  cursor: pointer; /* Ensure the cursor is a pointer */
+  cursor: pointer; 
 }
 
 body.light .skill input[type="range"]::-moz-range-track {
-  background: #ddd; /* Light gray track for Firefox in light mode */
-  border: none; /* Ensure no extra borders are interfering */
+  background: #ddd; 
+  border: none; 
 }
-/* More specific rule to remove button focus outlines */
+
 .project-links button:focus,
 .project-links button a:focus {
   outline: none !important;
 }
-/* More specific rule to style button focus */
+
 .project-links button:focus {
-  outline: 2px solid #6b4fcf !important; /* Your primary color */
+  outline: 2px solid #6b4fcf !important; 
   outline-offset: 2px;
   border-radius: 6px;
 }
 
 .project-links button a:focus {
-  outline: none !important; /* Remove inner link outline if styling the button */
+  outline: none !important; 
 }
 .project-links button {
-  border: none; /* Remove the default button border */
-  /* Keep your other button styles here, e.g., padding, background-color, color, border-radius */
+  border: none; 
   height: 30px;
   font-weight: bold;
   color: white;
   background-color: #7b2cbf;
   border-radius: 6px;
   box-shadow: none;
-  outline: none; /* It's still good practice to include this to manage focus outlines */
-  cursor: pointer; /* Ensure it looks clickable */
+  outline: none;
+  cursor: pointer; 
   transition: transform 0.3s;
 }
 
 .project-links button:hover {
-  transform: translateY(-2px); /* Example hover effect */
-  /* Add other hover styles if you have them */
+  transform: translateY(-2px); 
 }
 
-/* Style the link inside the button if needed */
 .project-links button a {
   text-decoration: none;
-  color: inherit; /* Inherit the button's text color */
-  display: block; /* Make the link fill the button */
+  color: inherit; 
+  display: block;
   width: 100%;
   height: 100%;
 }
 
 .project-links button a:focus {
-  outline: none; /* Remove focus outline from the link if styling the button's focus */
+  outline: none; 
 }
 
 .project-links button:focus {
-  outline: 2px solid #6b4fcf; /* Example custom focus style for the button */
+  outline: 2px solid #6b4fcf; 
   outline-offset: 2px;
 }
 .project-links button a {
   text-decoration: none;
   color: inherit; /* Inherit the button's text color */
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   width: 100%;
   height: 100%;
-  line-height: 1; /* Reset line-height that might interfere with vertical centering */
+  line-height: 1; 
 }
 
+/* Responsiveness */
 @media (max-width: 765px) {
   nav {
     flex-direction: row;
@@ -710,15 +695,15 @@ body.light .skill input[type="range"]::-moz-range-track {
   }
 
   .contact-links {
-    flex-direction: row; /* Make contact links display in a row */
-    justify-content: left; /* Center the links horizontally */
+    flex-direction: row; 
+    justify-content: left; 
     flex-wrap: wrap; /* Allow wrapping to multiple lines if necessary */
-    gap: 10px; /* Add some gap between the links */
+    gap: 10px; 
   }
 
   .contact-links a {
-    margin-bottom: 0; /* Remove bottom margin to prevent vertical spacing */
-    width: auto; /* Adjust width to content, so they don't take full width */
+    margin-bottom: 0; 
+    width: auto;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
   }
 
@@ -757,8 +742,6 @@ body.light .skill input[type="range"]::-moz-range-track {
   }
 }
 
-
-
 @media (max-width: 806px) {
   .container {
     flex-direction: column-reverse; /* Stack photo and left content vertically */
@@ -776,8 +759,8 @@ body.light .skill input[type="range"]::-moz-range-track {
   }
   .left,
   .right {
-    width: 100%; /* Make them take full width */
-    margin-bottom: 20px; /* Add some spacing */
+    width: 100%; 
+    margin-bottom: 20px; 
   }
   #home-features {
     display: flex;
@@ -791,13 +774,13 @@ body.light .skill input[type="range"]::-moz-range-track {
   }
 
   nav a {
-    font-size: 18px; /* Reduce font size in navbar by 2px (from 20px) */
+    font-size: 18px; 
   }
 }
 
 @media (max-width: 600px) {
   .skills-grid {
-    grid-template-columns: 1fr; /* Single column on very small screens */
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
 }
 @media (max-width: 740px) {
@@ -857,16 +840,15 @@ body.light .skill input[type="range"]::-moz-range-track {
   }
 }
 
-/* Media query for smaller screens to control button size */
 @media (max-width: 450px) {
   .theme-toggle {
-    font-size: 6px; /* Decrease font size of the icon/text */
-    padding: 6px 10px; /* Decrease padding */
-    margin-left: 5px; /* Adjust margin */
+    font-size: 6px;
+    padding: 6px 10px; 
+    margin-left: 5px; 
   }
 
   nav a {
-    font-size: 11px; /* Minimum readable font size for links */
+    font-size: 11px; 
     padding: 3px 5px;
     margin: 0 2px;
   }
@@ -874,16 +856,15 @@ body.light .skill input[type="range"]::-moz-range-track {
     gap: 1px;
   }
 }
-
 @media (max-width: 400px) {
   .theme-toggle {
-    font-size: 9px; /* Further decrease font size */
+    font-size: 9px; 
     padding: 5px 8px;
     margin-left: 3px;
   }
 
   nav a {
-    font-size: 10px; /* Minimum readable font size for links */
+    font-size: 10px; 
     padding: 3px 5px;
     margin: 0 2px;
   }
@@ -894,17 +875,14 @@ body.light .skill input[type="range"]::-moz-range-track {
     font-size: 6px;
   }
 }
-
 @media (max-width: 360px) {
   .theme-toggle {
-    font-size: 5px; /* Even smaller button text/icon */
+    font-size: 5px; 
     padding: 4px 6px;
     margin-left: 2px;
   }
-
   nav a {
     font-size: 9px;
     padding: 2px 4px;
   }
-  /* nav gap remains 1px */
 }
