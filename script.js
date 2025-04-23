@@ -1,3 +1,4 @@
+// Select key DOM elements
 const navLinks = document.querySelector('.nav-links');
 const scrollElements = document.querySelectorAll(
   'section, .left, .right, .timeline-item, .feature, .contact-links a, .skill, .project-card, .frame, #about-intro, #about-sections h4, #about-sections p, #about-sections ul'
@@ -7,15 +8,18 @@ const body = document.body;
 const sunIconClass = 'fa-solid fa-sun';
 const moonIconClass = 'fa-solid fa-moon';
 
+// Check if an element is in view with optional offset
 const elementInView = (el, offset = 100) => {
   const elementTop = el.getBoundingClientRect().top;
   return (
     elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
   );
 };
+// Add 'scrolled' class to show animation
 const displayScrollElement = (el) => {
   el.classList.add('scrolled');
 };
+// Apply scroll animation to all target elements
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
     if (elementInView(el, 100)) {
@@ -23,6 +27,7 @@ const handleScrollAnimation = () => {
     }
   });
 };
+// Dynamically create and insert project cards
 function renderProjects(projects) {
   const container = document.querySelector('.project-grid');
   if (!projects || !container) return;
@@ -44,6 +49,7 @@ function renderProjects(projects) {
     container.appendChild(card);
   });
 }
+// Apply and store the selected theme
 function setTheme(theme) {
   if (theme === 'light') {
     body.classList.add('light');
@@ -52,45 +58,54 @@ function setTheme(theme) {
     body.classList.remove('light');
     themeToggle.innerHTML = `<i class="${sunIconClass}"></i>`;
   }
-  localStorage.setItem('theme', theme);
+  localStorage.setItem('theme', theme); // Save preference
 }
+// Load and apply saved theme on page load
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
   setTheme('light');
 } else {
   setTheme('dark');
 }
+// Toggle theme on button click
 themeToggle.addEventListener('click', () => {
   const currentTheme = localStorage.getItem('theme');
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   setTheme(newTheme);
 });
+// Fetch content from JSON file and populate DOM
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
+    // Populate home section
     document.getElementById('home-title').textContent = data.home.title;
     document.getElementById('home-intro').textContent = data.home.intro;
     document.getElementById('home-image').src = data.home.image;
+
     const frame = document.querySelector('.frame');
     if (frame) {
-      frame.classList.add('scrolled');
+      frame.classList.add('scrolled'); // Immediately animate frame
     }
+
     data.home.features.forEach(feature => {
       const div = document.createElement('div');
       div.className = 'feature';
       div.textContent = feature;
       document.getElementById('home-features').appendChild(div);
     });
+
     data.home.links.forEach(link => {
       const a = document.createElement('a');
       a.textContent = link;
       a.href = '#';
       document.getElementById('home-links').appendChild(a);
     });
+
+    // Populate about section
     document.getElementById('about-intro').textContent = data.about.intro;
     const aboutSectionsContainer = document.getElementById('about-sections');
     if (aboutSectionsContainer) {
-      aboutSectionsContainer.innerHTML = ''; // Clear any existing content
+      aboutSectionsContainer.innerHTML = '';
       data.about.sections.forEach(section => {
         if (section.heading) {
           const h4 = document.createElement('h4');
@@ -113,6 +128,8 @@ fetch('data.json')
         }
       });
     }
+
+    // Populate education timeline
     data.education.forEach(item => {
       const div = document.createElement('div');
       div.className = 'timeline-item';
@@ -127,6 +144,8 @@ fetch('data.json')
       `;
       document.getElementById('education-list').appendChild(div);
     });
+
+    // Populate skills list
     const skillsListContainer = document.getElementById('skills-list');
     if (skillsListContainer) {
       data.skills.forEach(skill => {
@@ -139,8 +158,12 @@ fetch('data.json')
         skillsListContainer.appendChild(div);
       });
     }
+
+    // Populate projects section
     document.getElementById('projects-title').textContent = data.projects.title;
     renderProjects(data.projects.items);
+
+    // Populate contact section
     document.getElementById('contact-title').textContent = data.contact.title;
     document.getElementById('contact-form').action = data.contact.formAction;
     const contactLinksContainer = document.getElementById('contact-links');
@@ -154,5 +177,7 @@ fetch('data.json')
       });
     }
   });
+
+// Apply scroll animation on page load and on scroll
 window.addEventListener('scroll', handleScrollAnimation);
-handleScrollAnimation();
+handleScrollAnimation(); // Initial call in case elements are in view from the start
