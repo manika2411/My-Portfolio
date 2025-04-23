@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="theme-toggle" id="theme-toggle">
+    <i class="fa-solid fa-sun"></i>
+  </div>
+  <div class="container" id="home">
+    <div class="left">
+      <h1 id="home-title"></h1>
+      <p id="home-intro"></p>
+      <div class="features" id="home-features"></div>
+      <div class="links" id="home-links"></div>
+    </div>
+    <div class="right">
+      <div class="frame">
+        <img id="home-image" alt="Profile Picture">
+      </div>
+    </div>
+  </div>
+  <section id="about">
+    <h3>ABOUT ME</h3>
+    <p id="about-intro"></p>
+    <p><strong></strong> <span id="about-tech"></span></p>
+    <div id="about-sections"></div>
+  </section>
+  <section id="education">
+    <h3>MY EDUCATION</h3>
+    <div class="timeline-container" id="education-list"></div>
+  </section>
+  <section id="skills">
+    <h3>MY SKILLS</h3>
+    <div class="skills-grid" id="skills-list">
+      </div>
+  </section>
+  <section id="projects">
+    <h3 id="projects-title"></h3>
+    <p id="projects-description"></p>
+    <div class="project-grid"></div>
+  </section>
+  <section id="contact">
+    <h3 id="contact-title"></h3>
+    <div class="contact-links" id="contact-links"></div>
+    <h4>Or write a message here!</h4>
+    <form class="message-form" method="POST" id="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Type your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

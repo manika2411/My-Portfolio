@@ -1,0 +1,108 @@
+{
+    "home": {
+      "title": "Website Developer",
+      "intro": "Hi! I'm Manika Singla, a creative and detail-oriented Full Stack Web Developer who brings ideas to life through stunning, functional websites. I specialize in both front-end elegance and back-end logic, ensuring seamless digital experiences.",
+      "features": [
+        "Creative Design Solutions",
+        "End-to-End Development"
+      ],
+      "links": [
+        "🚀 Building Stunning Interfaces",
+        "🧠 Crafting Seamless Experiences",
+        "💡 Turning Ideas Into Reality"
+      ],
+      "image": "myphoto.png"
+    },
+    "about": {
+      "title": "ABOUT",
+      "intro": "Hi, I am Manika Singla! I am a Full Stack Web Developer passionate about creating modern, responsive, and user-friendly websites and applications. I specialize in crafting clean, efficient, and visually appealing digital experiences using HTML, CSS, JavaScript, Node.js, MongoDB, MySQL, and more.",
+      "sections": [
+        {
+          "heading": "My Web Development Journey",
+          "text": "My journey into web development began with a deep curiosity about how websites function. Over time, this curiosity turned into a passion for building interactive user interfaces, improving web experiences, and staying updated with the latest industry trends. This passion eventually led me to explore backend technologies and become a full stack developer."
+        },
+        {
+          "heading": "What I Do Best",
+          "list": [
+            "Responsive Web Design - Ensuring seamless experiences across all devices.",
+            "Interactive and Dynamic Web Experiences - Enhancing websites using JavaScript.",
+            "Backend Development - Building robust server-side logic using Node.js and databases.",
+            "Performance Optimization - Writing efficient, maintainable code.",
+            "Web Accessibility - Building websites that are inclusive and user-friendly."
+          ]
+        },
+        {
+          "heading": "Expanding My Knowledge",
+          "text": "As a full stack developer, I continuously seek to strengthen my skills across both frontend and backend technologies. I'm constantly exploring new frameworks, tools, and best practices to deliver scalable, high-performing web applications."
+        },
+        {
+          "heading": "My Passion and Goals",
+          "text": "I thrive on continuous learning, problem-solving, and building intuitive digital experiences. My goal is to develop impactful, high-performing, accessible, and visually stunning web applications while consistently pushing my skills to new heights."
+        }
+      ]
+    },
+    "education": [
+      {
+        "date": "2023 - Present",
+        "degree": "Bachelor of Technology in Computer Engineering",
+        "institution": "Thapar Institute of Engineering and Technology, Patiala",
+        "description": "Currently in 4th Semester, learning Web Development, Data Structures, DBMS, and Artificial Intelligence."
+      },
+      {
+        "date": "2021 - 2023",
+        "degree": "Senior Secondary Education",
+        "institution": "Scholar Fields Public School",
+        "description": "Stream: Non-Medical (Physics, Chemistry, Math) | CBSE Board"
+      }
+    ],
+    "skills": [
+      { "name": "HTML", "level": 95 },
+      { "name": "CSS", "level": 90 },
+      { "name": "JavaScript", "level": 85 },
+      { "name": "React", "level": 80 },
+      { "name": "Node.js", "level": 75 },
+      { "name": "Express.js", "level": 82 },
+      { "name": "MongoDB", "level": 85 },
+      { "name": "Tailwind CSS", "level": 80 }
+    ],
+    "projects": {
+      "title": "MY PROJECTS",
+      "description": "Here are some of the projects I have worked on:",
+      "items": [
+        {
+          "title": "Netflix Clone",
+          "description": "A responsive Netflix landing page clone using modern layout and grid.",
+          "tech": ["HTML", "CSS"],
+          "image": "netflix.png",
+          "github": "https://github.com/manika2411/Netflix-Clone",
+          "live": "https://astounding-bonbon-d7c40e.netlify.app/"
+        },
+        {
+          "title": "Spotify Clone",
+          "description": "A music app clone with UI components and basic player functionality.",
+          "tech": ["HTML", "CSS", "JavaScript"],
+          "image": "spotify.png",
+          "github": "https://github.com/manika2411/Spotify-Clone",
+          "live": "https://famous-griffin-0573f6.netlify.app/"
+        },
+        {
+          "title": "Weather App",
+          "description": "A web app that fetches real-time weather data using OpenWeatherMap API.",
+          "tech": ["HTML", "CSS", "JavaScript", "API"],
+          "image": "weather.png",
+          "github": "https://github.com/manika2411/Weather-App",
+          "live": "https://weather-app-pied-iota.vercel.app"
+        }
+      ]
+    },
+    "contact": {
+      "title": "CONTACT ME",
+      "methods": [
+        { "type": "phone", "text": "📞 Contact Number", "href": "tel:+91 6280869120" },
+        { "type": "email", "text": "✉️ Gmail", "href": "mailto:manikasingla24@gmail.com" },
+        { "type": "linkedin", "text": "💼 LinkedIn", "href": "https://www.linkedin.com/in/manika-singla-87331a29a/" },
+        { "type": "github", "text": "👩‍💻 GitHub", "href": "https://github.com/manika2411" }
+      ],
+      "formAction": "https://formsubmit.co/manikasingla24@gmail.com"
+    }
+  }
