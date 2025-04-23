@@ -13,11 +13,9 @@ const elementInView = (el, offset = 100) => {
     elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
   );
 };
-
 const displayScrollElement = (el) => {
   el.classList.add('scrolled');
 };
-
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
     if (elementInView(el, 100)) {
@@ -25,7 +23,6 @@ const handleScrollAnimation = () => {
     }
   });
 };
-
 function renderProjects(projects) {
   const container = document.querySelector('.project-grid');
   if (!projects || !container) return;
@@ -47,7 +44,6 @@ function renderProjects(projects) {
     container.appendChild(card);
   });
 }
-
 function setTheme(theme) {
   if (theme === 'light') {
     body.classList.add('light');
@@ -58,23 +54,17 @@ function setTheme(theme) {
   }
   localStorage.setItem('theme', theme);
 }
-
-// Set initial theme on page load
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
   setTheme('light');
 } else {
-  setTheme('dark'); // Default to dark mode
+  setTheme('dark');
 }
-
-// Toggle theme on button click
 themeToggle.addEventListener('click', () => {
   const currentTheme = localStorage.getItem('theme');
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   setTheme(newTheme);
 });
-
-// Fetch data and populate the page ONCE when the page loads
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
@@ -97,8 +87,6 @@ fetch('data.json')
       a.href = '#';
       document.getElementById('home-links').appendChild(a);
     });
-
-    // Populate About section from data.json
     document.getElementById('about-intro').textContent = data.about.intro;
     const aboutSectionsContainer = document.getElementById('about-sections');
     if (aboutSectionsContainer) {
@@ -125,7 +113,6 @@ fetch('data.json')
         }
       });
     }
-
     data.education.forEach(item => {
       const div = document.createElement('div');
       div.className = 'timeline-item';
@@ -167,9 +154,5 @@ fetch('data.json')
       });
     }
   });
-
-// Event listener for scroll animation
 window.addEventListener('scroll', handleScrollAnimation);
-
-// Initial call to handle scroll animation on load
 handleScrollAnimation();
