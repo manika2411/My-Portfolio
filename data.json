@@ -92,6 +92,14 @@
           "image": "weather.png",
           "github": "https://github.com/manika2411/Weather-App",
           "live": "https://weather-app-pied-iota.vercel.app"
+        },
+        {
+          "title": "Twitter Clone",
+          "description": "A visually accurate Twitter clone crafted, showcasing responsive design and attention to UI detail.",
+          "tech": ["Tailwind CSS"],
+          "image": "twitter.png",
+          "github": "https://github.com/manika2411/Twitter-Clone",
+          "live": "https://twitter-clone-pi-one.vercel.app/"
         }
       ]
     },
