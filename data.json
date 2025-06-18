@@ -100,6 +100,14 @@
           "image": "twitter.png",
           "github": "https://github.com/manika2411/Twitter-Clone",
           "live": "https://twitter-clone-pi-one.vercel.app/"
+        },
+        {
+          "title": "To-do List App",
+          "description": "A simple React-based Todo app that lets users add, edit, delete, and mark tasks as completed with local storage support.",
+          "tech": ["React.js, Tailwind CSS"],
+          "image": "todo.png",
+          "github": "https://github.com/manika2411/To-Do-React",
+          "live": "https://to-do-react-liya.vercel.app/"
         }
       ]
     },
