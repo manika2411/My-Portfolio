@@ -108,6 +108,14 @@
           "image": "todo.png",
           "github": "https://github.com/manika2411/To-Do-React",
           "live": "https://to-do-react-liya.vercel.app/"
+        },
+        {
+          "title": "E-Commerce Web Application",
+          "description": "Developed a responsive e-commerce platform with product filters, search, wishlist and cart features for seamless user experience.",
+          "tech": ["React.js, Tailwind CSS, API"],
+          "image": "ecom.png",
+          "github": "https://github.com/manika2411/E-Commerce-Website",
+          "live": "https://e-commerce-website-murex-theta.vercel.app/"
         }
       ]
     },
