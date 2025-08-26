@@ -116,6 +116,14 @@
           "image": "ecom.png",
           "github": "https://github.com/manika2411/E-Commerce-Website",
           "live": "https://e-commerce-website-murex-theta.vercel.app/"
+        },
+        {
+          "title": "AI-automated Pill Detector",
+          "description": "An AI-powered Pill Detector with a user-friendly website that identifies pills through image recognition and provides instant, reliable information.",
+          "tech": ["React.js, LandingAI, API"],
+          "image": "pill.png",
+          "github": "https://github.com/manika2411/Pill-Detector",
+          "live": "https://pill-detector.vercel.app/"
         }
       ]
     },
