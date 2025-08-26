@@ -119,7 +119,7 @@
         },
         {
           "title": "AI-automated Pill Detector",
-          "description": "An AI-powered Pill Detector with a user-friendly website that identifies pills through image recognition and provides instant, reliable information.",
+          "description": "An AI-powered Pill Detector with a user-friendly website that identifies pills through image recognition and provides instant information.",
           "tech": ["React.js, LandingAI, API"],
           "image": "pill.png",
           "github": "https://github.com/manika2411/Pill-Detector",
@@ -138,3 +138,4 @@
       "formAction": "https://formsubmit.co/manikasingla24@gmail.com"
     }
   }
+
